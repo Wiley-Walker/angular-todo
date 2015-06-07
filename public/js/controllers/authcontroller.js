@@ -33,7 +33,7 @@ controllers.controller('AuthCtrl', function ($scope, $http, $rootScope, $locatio
   }
 
 $scope.login = function(){
-    console.log('you clicked the register button')
+    console.log('you clicked the login button')
     $http({
           method: 'POST',
           url: '/api/user/login',

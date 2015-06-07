@@ -1,21 +1,31 @@
-h1 My Todos
+div(ng-app='AuthCtrl')
+  h1 Welcome
 .row
-  h3 Create a task
-  form#todoForm
-    input(type='hidden', name='db_id')
-    .form-group
-      label Title:
-      input#todoTitle(type='text', name='title')
-    .form-group
-      label Description:
-      textarea#todoDescription(name='description')
-    .form-group
-      label Priority:
-      input#todoPriority(type='text', name='priority')
-    .form-group
-      label Complete by:
-      input#todoDuedate(type='text', name='due_date', )
-    .form-group
-      label Completed:
-      input#todoDone(type='checkbox', name='complete')
-    button.btn.btn-success.btn-large(ng-click='submit()') Add Todo
+  .col-md-5
+  .col-md-2(style="background-color: #DEDECE")
+    h1 My Todos
+    h3 Create a task
+    form(role='form', novalidate, name='userForm')
+      input(type='hidden', name='db_id')
+      .form-group(style="align:center")
+        label Title:
+        br
+        input#todoTitle(type='text', name='title' ng-model='todo.title')
+      .form-group
+        label Description:
+        br
+        textarea#todoDescription(name='description' ng-model='todo.description')
+      .form-group
+        label Priority:
+        br
+        input#todoPriority(type='text', name='priority' ng-model='todo.priority')
+      .form-group
+        label Complete by:
+        br
+        input#todoDuedate(type='due_date', name='due_date' ng-model='todo.due_date' )
+      .form-group
+        label Completed:
+        br
+        input#todoDone(type='checkbox', name='complete' ng-model='todo.complete')
+  
+      button.btn.btn-success.btn-large(ng-click='newTask()') Add Todo

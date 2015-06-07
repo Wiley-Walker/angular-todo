@@ -1,3 +1,7 @@
 body{
-  text-align: center;
+  background-image: url("http://www.collegeathome.com/assets/headers/subject/computer_science.png")
 }
+col-md-1 {
+	background-color: #000000
+}
+h3 {color: white;}

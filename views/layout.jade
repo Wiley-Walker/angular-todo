@@ -1,12 +1,12 @@
 doctype html
-html(ng-app="myApp")
+html
   head
     meta(charset='utf8')
     base(href='/')
     title Angular Express
     link(rel='stylesheet', href='/css/app.css')
     link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
-  body
+  body(ng-app="myApp")
     block body
 
   script(src='js/lib/angular/angular.js')
@@ -15,9 +15,10 @@ html(ng-app="myApp")
   script(src='js/controllers.js')
   script(src='js/filters.js')
   script(src='js/directives.js')
-  script(src='bower_components/jquery/dist/jquery.min.js')
+  script(src='bower_components/jquery/dist/jquery.min.js')  
   script(src='bower_components/bootstrap/dist/js/bootstrap.min.js')
   script(src='js/controllers/homecontroller.js')
   script(src='js/controllers/todocontroller.js')
   script(src='js/controllers/authcontroller.js')
   script(src='js/controllers/navcontroller.js')
+  script(src='js/controllers/listTodo.js')
