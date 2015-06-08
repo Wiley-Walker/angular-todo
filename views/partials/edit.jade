@@ -1,0 +1,7 @@
+div(ng-controller='listTodoCtrl')
+  div(ng-repeat='task in tasks' style="font-size: 25px")
+    h1{{task.user}}
+    h2{{task.title}}
+    h3{{task.description}}
+    h4{{task.priority}}
+    h5{{task.due_date}} 
